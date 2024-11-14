@@ -3,7 +3,6 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-
 :root {
 	--accent: #6A95C8;
 	--accent-dark: #22224E;
@@ -43,7 +42,7 @@ body {
 	line-height: 1.7;
 }
 main {
-	width: 720px;
+	min-width: 80%;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
@@ -85,6 +84,7 @@ a:hover {
 	transition-duration: 250ms;
 }
 p {
+	font-size: 14pt;
 	margin-bottom: 1em;
 }
 .prose p {
@@ -120,20 +120,13 @@ pre > code {
 blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
+	font-size: 14pt;
+	margin-bottom: 30px;
 }
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+	margin-bottom: 20px;
 }
 
 .sr-only {

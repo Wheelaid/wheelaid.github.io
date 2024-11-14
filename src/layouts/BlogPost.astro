@@ -29,7 +29,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
+				min-width: 80%;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
@@ -50,6 +50,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			.last-updated-on {
 				font-style: italic;
+			}
+			.quote-list li {
+				font-size: 12pt;
 			}
 		</style>
 	</head>
