@@ -1,12 +1,13 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import Image from "astro/components/Image.astro";
 import { SITE_TITLE } from '../consts';
 ---
 
 <header class="m-0 px-4 bg-white shadow-lg">
 	<nav class="flex items-center justify-between">
 		<a class="flex gap-4 p-2 text-black no-underline" href="/">
-			<img src="/logo.png" alt="" width="50" />
+			<Image src={"/logo.png"} alt="" width={50} height={50}></Image>
 			<p class="my-auto block"">{SITE_TITLE}</p>
 		</a>
 		<div class="flex gap-4">

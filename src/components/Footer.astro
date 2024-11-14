@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 import { Instagram, Mail, MapPin } from 'lucide-astro'
@@ -12,9 +13,9 @@ const today = new Date();
 
 <footer>
 	<div class="flex justify-around text-left bg-gray-300">
-		<div class="block text-xs italic text-center my-auto flex-[1_1_1] p-[2em]">
+		<div class="block text-xs italic text-center my-auto flex-[1_1_1] p-8">
 			<a href="/">
-				<img src="/logo.png" alt="" width="110" />
+				<Image src={"/logo.png"} alt="" width={110} height={110}></Image>
 			</a>
 			<p>
 				{SITE_DESCRIPTION}
@@ -22,14 +23,14 @@ const today = new Date();
 			
 		</a>
 		</div>
-		<div class="flex flex-col flex-[1_1_1] p-[2em]">
+		<div class="flex flex-col flex-[1_1_1] p-8">
 			Ressources<br>
 			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/">Accueil</a>
 			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/technical">Projet</a>
 			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/form">Questionnaire</a>
 			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/about">Contact</a>
 		</div>
-		<div class="flex-[1_1_1] p-[2em]">
+		<div class="flex-[1_1_1] p-8">
 			Contact
 			<a href="https://www.instagram.com" target="_blank" class="flex items-center text-[12pt] px-0 py-[5px] hover:text-[color:var(--accent-dark)] hover:duration-[250ms]">
 				<!-- <i class="fab fa-instagram text-[14pt] mr-2.5"></i>  -->
