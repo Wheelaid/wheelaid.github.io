@@ -19,7 +19,7 @@ nav {
     justify-content: space-between;
 }
 nav a {
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
@@ -36,4 +36,15 @@ nav a.active {
     .social-links {
         display: none;
     }
+}
+
+.logo-link {
+    display: flex;
+    gap: 15px;
+}
+
+.text-link {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
 }

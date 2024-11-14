@@ -8,7 +8,9 @@ import { SITE_TITLE } from '../consts';
 		<link href="src/styles/header.css" rel="stylesheet" />
 	</head>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<a class="logo-link" href="/">
+			<img src="/logo.png" alt="" width="50" /><p class="text-link"">{SITE_TITLE}</p>
+		</a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/technical">Projet</HeaderLink>
@@ -17,4 +19,3 @@ import { SITE_TITLE } from '../consts';
 		</div>
 	</nav>
 </header>
-
