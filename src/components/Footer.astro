@@ -1,9 +1,51 @@
 ---
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 const today = new Date();
 ---
 
-<footer class="text-center text-gray-500 bg-gray-100 px-4 pt-8 pb-24">
-	&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="src/styles/footer.css" rel="stylesheet" />
+</head>
+
+<footer>
+	<div class="footer-container">
+		<div class="footer-first-col">
+			<a href="/">
+				<img src="/logo.png" alt="" width="110" />
+			</a>
+			<p>
+				{SITE_DESCRIPTION}
+			</p>
+			
+		</a>
+		</div>
+		<div class="footer-resources">
+			Ressources<br>
+			<a class="footer-resources-link" href="/">Accueil</a>
+			<a class="footer-resources-link" href="/technical">Projet</a>
+			<a class="footer-resources-link" href="/form">Questionnaire</a>
+			<a class="footer-resources-link" href="/about">Contact</a>
+		</div>
+		<div>
+			Contact
+			<a href="https://www.instagram.com" target="_blank" class="footer-contact-link">
+				<i class="fab fa-instagram"></i> @wheelaid
+			</a>
+			<a href="mailto:contact@wheelaid.com" class="footer-contact-link">
+				<i class="fas fa-envelope"></i>
+				contact@wheelaid.com
+			</a>
+			<a href="https://maps.app.goo.gl/8H1piV39u1EMxa1y6" target="_blank" class="footer-contact-link">
+				<i id="footer-address" class="fas fa-map-marker-alt"></i>
+				ESIR, Rennes
+			</a>
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
+	</div>
 </footer>
+
