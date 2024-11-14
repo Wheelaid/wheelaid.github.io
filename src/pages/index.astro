@@ -16,14 +16,13 @@ import BlogPost from '../layouts/BlogPost.astro';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-<BlogPost 
-title={params.frontmatter.title}
-description={params.frontmatter.description}
-pubDate={new Date(params.frontmatter.pubDate)}
-heroImage={params.frontmatter.heroImage}>
-	<Content/>
-</BlogPost>
-
-		
+		<BlogPost 
+			title={params.frontmatter.title}
+			description={params.frontmatter.description}
+			pubDate={new Date(params.frontmatter.pubDate)}
+			heroImage={params.frontmatter.heroImage}
+		>
+			<Content/>
+		</BlogPost>
 	</body>
 </html>
