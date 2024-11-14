@@ -3,8 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 
-import {Content} from '../content/pages/technical.md';
-import * as params from '../content/pages/technical.md';
+import {Content} from '../content/pages/about.md';
+import * as params from '../content/pages/about.md';
 
 import BlogPost from '../layouts/BlogPost.astro';
 
@@ -14,6 +14,7 @@ import BlogPost from '../layouts/BlogPost.astro';
     title={params.frontmatter.title}
     description={params.frontmatter.description}
     pubDate={new Date(params.frontmatter.pubDate)}
-    heroImage={params.frontmatter.heroImage}>
-        <Content/>
+    heroImage={params.frontmatter.heroImage}
+>
+    <Content/>
 </BlogPost>

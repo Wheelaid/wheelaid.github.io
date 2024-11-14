@@ -5,8 +5,8 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
+	--accent: #6A95C8;
+	--accent-dark: #22224E;
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -82,6 +82,7 @@ a {
 }
 a:hover {
 	color: var(--accent);
+	transition-duration: 250ms;
 }
 p {
 	margin-bottom: 1em;
