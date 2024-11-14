@@ -1,17 +1,18 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
+import { Instagram, Mail, MapPin } from 'lucide-astro'
+
 const today = new Date();
 ---
 
 <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-	<link href="src/styles/footer.css" rel="stylesheet" />
 </head>
 
 <footer>
-	<div class="footer-container">
-		<div class="footer-first-col">
+	<div class="flex justify-around text-left bg-gray-300">
+		<div class="block text-xs italic text-center my-auto flex-[1_1_1] p-[2em]">
 			<a href="/">
 				<img src="/logo.png" alt="" width="110" />
 			</a>
@@ -21,31 +22,31 @@ const today = new Date();
 			
 		</a>
 		</div>
-		<div class="footer-resources">
+		<div class="flex flex-col flex-[1_1_1] p-[2em]">
 			Ressources<br>
-			<a class="footer-resources-link" href="/">Accueil</a>
-			<a class="footer-resources-link" href="/technical">Projet</a>
-			<a class="footer-resources-link" href="/form">Questionnaire</a>
-			<a class="footer-resources-link" href="/about">Contact</a>
+			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/">Accueil</a>
+			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/technical">Projet</a>
+			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/form">Questionnaire</a>
+			<a class="text-[12pt] pl-5 hover:text-[color:var(--accent-dark)] hover:duration-[250ms]" href="/about">Contact</a>
 		</div>
-		<div>
+		<div class="flex-[1_1_1] p-[2em]">
 			Contact
-			<a href="https://www.instagram.com" target="_blank" class="footer-contact-link">
-				<i class="fab fa-instagram"></i> @wheelaid
+			<a href="https://www.instagram.com" target="_blank" class="flex items-center text-[12pt] px-0 py-[5px] hover:text-[color:var(--accent-dark)] hover:duration-[250ms]">
+				<!-- <i class="fab fa-instagram text-[14pt] mr-2.5"></i>  -->
+				<Instagram></Instagram> @wheelaid
 			</a>
-			<a href="mailto:contact@wheelaid.com" class="footer-contact-link">
-				<i class="fas fa-envelope"></i>
-				contact@wheelaid.com
+			<a href="mailto:contact@wheelaid.com" class="flex items-center text-[12pt] px-0 py-[5px] hover:text-[color:var(--accent-dark)] hover:duration-[250ms]">
+				<!-- <i class="fas fa-envelope text-[14pt] mr-2.5"></i> -->
+				<Mail></Mail> contact@wheelaid.com
 			</a>
-			<a href="https://maps.app.goo.gl/8H1piV39u1EMxa1y6" target="_blank" class="footer-contact-link">
-				<i id="footer-address" class="fas fa-map-marker-alt"></i>
-				ESIR, Rennes
+			<a href="https://maps.app.goo.gl/8H1piV39u1EMxa1y6" target="_blank" class="flex items-center text-[12pt] px-0 py-[5px] hover:text-[color:var(--accent-dark)] hover:duration-[250ms]">
+				<!-- <i id="footer-address" class="fas fa-map-marker-alt text-[14pt] mr-2.5"></i> -->
+				<MapPin></MapPin> ESIR, Rennes
 			</a>
 		</div>
 	</div>
 
-	<div class="footer-bottom">
+	<div class="text-center p-2 bg-slate-400">
 		&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
 	</div>
 </footer>
-
