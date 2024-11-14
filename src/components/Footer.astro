@@ -4,14 +4,6 @@ import { SITE_TITLE } from "../consts";
 const today = new Date();
 ---
 
-<footer>
+<footer class="text-center text-gray-500 bg-gray-100 px-4 pt-8 pb-24">
 	&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
 </footer>
-<style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-</style>
