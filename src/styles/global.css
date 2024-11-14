@@ -82,6 +82,7 @@ a {
 }
 a:hover {
 	color: var(--accent);
+	transition-duration: 250ms;
 }
 p {
 	margin-bottom: 1em;
