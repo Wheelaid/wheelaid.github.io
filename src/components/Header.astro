@@ -3,15 +3,13 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<head>
-		<link href="src/styles/header.css" rel="stylesheet" />
-	</head>
-	<nav>
-		<a class="logo-link" href="/">
-			<img src="/logo.png" alt="" width="50" /><p class="text-link"">{SITE_TITLE}</p>
+<header class="m-0 px-4 bg-white shadow-lg">
+	<nav class="flex items-center justify-between">
+		<a class="flex gap-4 p-2 text-black no-underline" href="/">
+			<img src="/logo.png" alt="" width="50" />
+			<p class="my-auto block"">{SITE_TITLE}</p>
 		</a>
-		<div class="internal-links">
+		<div class="flex gap-4">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/technical">Projet</HeaderLink>
 			<HeaderLink href="/form">Questionnaire</HeaderLink>
