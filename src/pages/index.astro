@@ -9,20 +9,11 @@ import * as params from '../content/pages/index.md';
 import BlogPost from '../layouts/BlogPost.astro';
 
 ---
-
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<BlogPost 
-			title={params.frontmatter.title}
-			description={params.frontmatter.description}
-			pubDate={new Date(params.frontmatter.pubDate)}
-			heroImage={params.frontmatter.heroImage}
-		>
-			<Content/>
-		</BlogPost>
-	</body>
-</html>
+<BlogPost 
+	title={params.frontmatter.title}
+	description={params.frontmatter.description}
+	pubDate={new Date(params.frontmatter.pubDate)}
+	heroImage={params.frontmatter.heroImage}
+>
+	<Content/>
+</BlogPost>
