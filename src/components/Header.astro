@@ -1,20 +1,20 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import Image from "astro/components/Image.astro";
-import { SITE_TITLE } from '../consts';
+import {ROUTES, SITE_TITLE} from '../consts';
 ---
 
-<header class="m-0 px-4 bg-white shadow-lg">
+<header class="m-0 px-4 bg-danube-100/80 shadow-sm sticky top-0 backdrop-blur-sm">
 	<nav class="flex items-center justify-between">
-		<a class="flex gap-4 p-2 text-black no-underline" href="/">
+        <a class="flex items-center leading-tight gap-4 p-2 text-danube-700 no-underline text-2xl" href="/">
 			<Image src={"/logo.png"} alt="" width={50} height={50}></Image>
-			<p class="my-auto block"">{SITE_TITLE}</p>
+            {SITE_TITLE}
 		</a>
 		<div class="flex gap-4">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/technical">Projet</HeaderLink>
-			<HeaderLink href="/form">Questionnaire</HeaderLink>
-			<HeaderLink href="/about">Contact</HeaderLink>
+            {ROUTES.map((r) => {
+                return
+                        <HeaderLink href={r.path}>{r.name}</HeaderLink>
+            })}
 		</div>
 	</nav>
 </header>
