@@ -1,9 +1,3 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 :root {
 	--accent: #6A95C8;
 	--accent-dark: #22224E;
@@ -31,21 +25,14 @@
     font-style: normal;
     font-display: swap;
 }
-/*
-  Based on TailwindCSS recommendations,
-  consider using classes instead of the `@apply` directive
-  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
-*/
-
 
 body {
-    @apply text-left bg-[100%_600px] break-words text-[rgb(var(--gray-dark))] text-xl leading-[1.7] m-0 p-0;
+    @apply text-left break-words text-danube-800 text-xl leading-relaxed m-0 p-0 bg-danube-50;
     font-family: "Atkinson", sans-serif;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
     word-wrap: break-word;
   }
   main {
-    @apply w-[720px] max-w-[calc(100%_-_2em)] m-auto px-[1em] py-[3em];
+      @apply w-[720px] max-w-full m-auto px-4 py-12;
   }
   h1,
   h2,
@@ -53,35 +40,35 @@ body {
   h4,
   h5,
   h6 {
-    @apply text-[rgb(var(--black))] leading-[1.2] mt-0 mb-2 mx-0;
+      @apply text-danube-950 leading-tight mt-0 mb-2 mx-0;
   }
   h1 {
-    @apply text-[3.052em];
+      @apply text-5xl;
   }
   h2 {
-    @apply text-[2.441em];
+      @apply text-4xl;
   }
   h3 {
-    @apply text-[1.953em];
+      @apply text-3xl;
   }
   h4 {
-    @apply text-[1.563em];
+      @apply text-2xl;
   }
   h5 {
-    @apply text-[1.25em];
+      @apply text-xl;
   }
   strong,
   b {
     @apply font-bold;
   }
   a {
-    @apply text-[color:var(--accent)] hover:text-[color:var(--accent)] hover:duration-[250ms];
+      @apply text-danube-400 hover:text-danube-400 hover:duration-200;
   }
   p {
-    @apply mb-[1em];
+      @apply mb-4;
   }
   .prose p {
-    @apply mb-[2em];
+      @apply mb-8;
   }
   textarea {
     @apply w-full text-base;
@@ -96,26 +83,26 @@ body {
     @apply max-w-full h-auto rounded-lg;
   }
   code {
-    @apply bg-[rgb(var(--gray-light))] px-[5px] py-0.5 rounded-sm;
+      @apply bg-danube-200 px-1 py-0.5 rounded-sm;
   }
   pre {
-    @apply p-[1.5em] rounded-lg;
+      @apply p-6 rounded-lg;
   }
   pre > code {
     all: unset;
   }
   blockquote {
-    @apply border-l-[color:var(--accent)] text-[1.333em] m-0 pl-5 pr-0 py-0 border-l-4 border-solid;
+      @apply border-l-danube-400 text-xl m-0 pl-5 pr-0 py-0 border-l-4 border-solid;
   }
   hr {
-    @apply border-t-[rgb(var(--gray-light))] border-[none] border-t border-solid;
+      @apply border-t-danube-200 border-[none] border-t border-solid;
   }
   @media (max-width: 720px) {
     body {
       @apply text-lg;
     }
     main {
-      @apply p-[1em];
+        @apply p-4;
     }
   }
   .sr-only {
