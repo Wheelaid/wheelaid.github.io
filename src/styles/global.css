@@ -14,6 +14,7 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -129,20 +130,108 @@ hr {
 	margin-bottom: 20px;
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/fonts/atkinson-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+
+body {
+    @apply text-left bg-[100%_600px] break-words text-[rgb(var(--gray-dark))] text-xl leading-[1.7] m-0 p-0;
+    font-family: "Atkinson", sans-serif;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    word-wrap: break-word;
+  }
+  main {
+    @apply w-[720px] max-w-[calc(100%_-_2em)] m-auto px-[1em] py-[3em];
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-[rgb(var(--black))] leading-[1.2] mt-0 mb-2 mx-0;
+  }
+  h1 {
+    @apply text-[3.052em];
+  }
+  h2 {
+    @apply text-[2.441em];
+  }
+  h3 {
+    @apply text-[1.953em];
+  }
+  h4 {
+    @apply text-[1.563em];
+  }
+  h5 {
+    @apply text-[1.25em];
+  }
+  strong,
+  b {
+    @apply font-bold;
+  }
+  a {
+    @apply text-[color:var(--accent)] hover:text-[color:var(--accent)] hover:duration-[250ms];
+  }
+  p {
+    @apply mb-[1em];
+  }
+  .prose p {
+    @apply mb-[2em];
+  }
+  textarea {
+    @apply w-full text-base;
+  }
+  input {
+    @apply text-base;
+  }
+  table {
+    @apply w-full;
+  }
+  img {
+    @apply max-w-full h-auto rounded-lg;
+  }
+  code {
+    @apply bg-[rgb(var(--gray-light))] px-[5px] py-0.5 rounded-sm;
+  }
+  pre {
+    @apply p-[1.5em] rounded-lg;
+  }
+  pre > code {
+    all: unset;
+  }
+  blockquote {
+    @apply border-l-[color:var(--accent)] text-[1.333em] m-0 pl-5 pr-0 py-0 border-l-4 border-solid;
+  }
+  hr {
+    @apply border-t-[rgb(var(--gray-light))] border-[none] border-t border-solid;
+  }
+  @media (max-width: 720px) {
+    body {
+      @apply text-lg;
+    }
+    main {
+      @apply p-[1em];
+    }
+  }
+  .sr-only {
+    @apply absolute h-px w-px overflow-hidden whitespace-nowrap m-0 p-0 border-0;
+    /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px 1px 1px 1px);
+    /* maybe deprecated but we need to support legacy browsers */
+    clip: rect(1px, 1px, 1px, 1px);
+    /* modern browsers, clip-path works inwards from each corner */
+    clip-path: inset(50%);
+    /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+  }
+  
