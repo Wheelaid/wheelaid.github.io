@@ -11,7 +11,6 @@ import BlogPost from '../layouts/BlogPost.astro';
 <BlogPost
         title={params.frontmatter.title}
         description={params.frontmatter.description}
-        pubDate={new Date(params.frontmatter.pubDate)}
         heroImage={params.frontmatter.heroImage}
 >
     <Content/>
