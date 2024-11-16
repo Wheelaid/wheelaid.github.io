@@ -2,46 +2,49 @@
 import Image from "astro/components/Image.astro";
 import {SITE_TITLE, SITE_DESCRIPTION, ROUTES} from "../consts";
 
-import { Instagram, Mail, MapPin } from 'lucide-astro'
+import {Instagram, Mail, MapPin} from 'lucide-astro'
 
 const today = new Date();
 ---
 <footer class="bg-danube-100 p-8 flex flex-col gap-2">
     <div class="flex justify-between text-left">
         <div class="flex flex-col items-center max-w-36 gap-2 text-xs italic text-center my-auto flex-auto">
-				<Image src={"/logo.png"} alt="" width={110} height={110}></Image>
-				{SITE_DESCRIPTION}
-		</div>
+            <Image src={"/logo.png"} alt="" width={110} height={110}></Image>
+            {SITE_DESCRIPTION}
+        </div>
         <div class="flex justify-between flex-auto max-w-md">
 
             <div class="flex flex-col flex-1">
-			Ressources<br>
+                Ressources<br>
                 {ROUTES.map((r) => {
                     return <a
                             class="flex gap-1 items-center text-base px-0 py-1 hover:text-danube-800 hover:duration-200"
                             href={r.path}>{r.name}</a>
                 })}
-		</div>
+            </div>
             <div class="flex flex-col flex-1">
-			Contact
+                Contact
                 <a href="https://www.instagram.com" target="_blank"
                    class="flex gap-1 items-center text-base px-0 py-1 hover:text-danube-800 hover:duration-200">
-				<Instagram></Instagram> @wheelaid
-			</a>
+                    <Instagram></Instagram>
+                    @wheelaid
+                </a>
                 <a href="mailto:contact@wheelaid.com"
                    class="flex items-center gap-1 text-base px-0 py-1 hover:text-danube-800 hover:duration-200">
-				<Mail></Mail> contact@wheelaid.com
-			</a>
+                    <Mail></Mail>
+                    contact@wheelaid.com
+                </a>
                 <a href="https://maps.app.goo.gl/8H1piV39u1EMxa1y6" target="_blank"
                    class="flex gap-1 items-center text-base px-0 py-1 hover:text-danube-800 hover:duration-200">
-				<MapPin></MapPin> ESIR, Rennes
-			</a>
-		</div>
+                    <MapPin></MapPin>
+                    ESIR, Rennes
+                </a>
+            </div>
         </div>
 
     </div>
 
     <div class="text-center p-2 text-base">
-		&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
-	</div>
+        &copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
+    </div>
 </footer>

@@ -1,15 +1,15 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type {HTMLAttributes} from 'astro/types';
 
 type Props = HTMLAttributes<'a'>;
 
-const { href, ...props } = Astro.props;
+const {href, ...props} = Astro.props;
 
-const { pathname } = Astro.url;
+const {pathname} = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
 <a href={href} class={"inline-block no-underline " + (isActive ? "font-bold text-danube-800" : "")} {...props}>
-	<slot />
+    <slot/>
 </a>
