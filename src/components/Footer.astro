@@ -7,39 +7,36 @@ import {Instagram, Mail, MapPin} from 'lucide-astro'
 const today = new Date();
 ---
 <footer class="bg-danube-100 p-8 flex flex-col gap-2">
-    <div class="flex justify-between text-left">
-        <div class="flex flex-col items-center max-w-36 gap-2 text-xs italic text-center my-auto flex-auto">
+    <div class="flex justify-evenly text-left">
+        <div class="flex flex-col items-center gap-2 text-xs italic text-center my-auto max-w-48">
             <Image src={"/logo.png"} alt="" width={110} height={110}></Image>
             {SITE_DESCRIPTION}
         </div>
-        <div class="flex justify-between flex-auto max-w-md">
-
-            <div class="flex flex-col flex-1">
-                Ressources<br>
-                {ROUTES.map((r) => {
-                    return <a
-                            class="flex gap-1 items-center text-base px-0 py-1 "
-                            href={r.path}>{r.name}</a>
-                })}
-            </div>
-            <div class="flex flex-col flex-1">
-                Contact
-                <a href="https://www.instagram.com" target="_blank"
-                   class="flex gap-1 items-center text-base px-0 py-1 ">
-                    <Instagram></Instagram>
-                    @wheelaid
-                </a>
-                <a href="mailto:contact@wheelaid.com"
-                   class="flex items-center gap-1 text-base px-0 py-1 ">
-                    <Mail></Mail>
-                    contact@wheelaid.com
-                </a>
-                <a href="https://maps.app.goo.gl/8H1piV39u1EMxa1y6" target="_blank"
-                   class="flex gap-1 items-center text-base px-0 py-1 ">
-                    <MapPin></MapPin>
-                    ESIR, Rennes
-                </a>
-            </div>
+        <div class="flex flex-col w-fit">
+            Ressources<br>
+            {ROUTES.map((r) => {
+                return <a
+                        class="flex gap-1 items-center text-base px-0 py-1 "
+                        href={r.path}>{r.name}</a>
+            })}
+        </div>
+        <div class="flex flex-col">
+            Contact
+            <a href="https://www.instagram.com" target="_blank"
+               class="flex gap-1 items-center text-base px-0 py-1 ">
+                <Instagram></Instagram>
+                @wheelaid
+            </a>
+            <a href="mailto:contact@wheelaid.com"
+               class="flex items-center gap-1 text-base px-0 py-1 ">
+                <Mail></Mail>
+                contact@wheelaid.com
+            </a>
+            <a href="https://maps.app.goo.gl/8H1piV39u1EMxa1y6" target="_blank"
+               class="flex gap-1 items-center text-base px-0 py-1 ">
+                <MapPin></MapPin>
+                ESIR, Rennes
+            </a>
         </div>
 
     </div>

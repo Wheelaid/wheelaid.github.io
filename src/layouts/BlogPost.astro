@@ -12,39 +12,33 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 ---
 
 <html lang="en">
-<head>
     <BaseHead title={title} description={description}/>
-</head>
-
-<body>
-<Header/>
-<main class="w-full m-0">
-    <article>
-        <div class="w-full">
+    <body>
+        <Header/>
+        <article class="w-full p-4">
             {heroImage &&
-                    <Image width={1020} height={510} src={heroImage} class="block my-0 mx-auto rounded-xl shadow-lg"
+                    <Image width={1020} height={510} src={heroImage} class="w-full max-w-4xl mx-auto mb-4 block my-0 rounded-xl shadow-lg"
                            alt=""/>}
-        </div>
-        <div class="w-[720px] max-w-full m-auto p-4 text-danube-800">
-            <div class="mb-4 py-4 text-center leading-none">
-                <div class="mb-2">
-                    <FormattedDate date={pubDate}/>
-                    {
-                        updatedDate && (
-                                    <div class="italic">
-                                        Last updated on
-                                        <FormattedDate date={updatedDate}/>
-                                    </div>
-                        )
-                    }
+            <main class="p-0">
+                <div class="mb-4 py-4 text-center leading-none">
+                    {pubDate ? <div class="mb-2">
+                        <FormattedDate date={pubDate}/>
+                        {
+                            updatedDate && (
+                                        <div class="italic">
+                                            Last updated on
+                                            <FormattedDate date={updatedDate}/>
+                                        </div>
+                            )
+                        }
+                    </div>
+                    : null}
+                    <h1 class="mb-2 font-medium">{title}</h1>
+                    <hr/>
                 </div>
-                <h1 class="mb-2 font-medium">{title}</h1>
-                <hr/>
-            </div>
-            <slot/>
-        </div>
-    </article>
-</main>
-<Footer/>
-</body>
+                <slot/>
+            </main>
+        </article>
+        <Footer/>
+    </body>
 </html>
