@@ -11,24 +11,13 @@
 }
 
 @font-face {
-    font-family: 'Atkinson';
-    src: url('/fonts/atkinson-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Atkinson';
-    src: url('/fonts/atkinson-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'Chillax';
+    src: url('/fonts/Chillax-Variable.woff2') format('woff2');
 }
 
 body {
     @apply text-left break-words text-danube-800 text-xl leading-relaxed m-0 p-0 bg-danube-50;
-    font-family: "Atkinson", sans-serif;
+    font-family: "Chillax", sans-serif;
     word-wrap: break-word;
 }
 
@@ -36,13 +25,8 @@ main {
     @apply w-[720px] max-w-full m-auto px-4 py-12;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @apply text-danube-950 leading-tight mt-0 mb-2 mx-0;
+h1, h2, h3, h4, h5, h6 {
+    @apply text-danube-950 leading-tight mt-0 mb-2 mx-0 tracking-wide;
 }
 
 h1 {
@@ -65,13 +49,12 @@ h5 {
     @apply text-xl;
 }
 
-strong,
-b {
-    @apply font-bold;
+strong, b {
+    @apply font-medium;
 }
 
 a {
-    @apply text-danube-400 hover:text-danube-400 hover:duration-200;
+    @apply text-danube-400 hover:text-danube-800 hover:duration-200 no-underline;
 }
 
 p {
@@ -115,7 +98,7 @@ blockquote {
 }
 
 hr {
-    @apply border-t-danube-200 border-[none] border-t border-solid;
+    @apply border-t-danube-200 border-[none] border-t border-solid m-4;
 }
 
 @media (max-width: 720px) {

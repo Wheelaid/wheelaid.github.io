@@ -6,14 +6,13 @@ import {ROUTES, SITE_TITLE} from '../consts';
 
 <header class="m-0 px-4 bg-danube-100/80 shadow-sm sticky top-0 backdrop-blur-sm">
     <nav class="flex items-center justify-between">
-        <a class="flex items-center leading-tight gap-4 p-2 text-danube-700 no-underline text-2xl" href="/">
+        <a class="flex items-center leading-tight gap-4 p-2 text-2xl" href="/">
             <Image src={"/logo.png"} alt="" width={50} height={50}></Image>
             {SITE_TITLE}
         </a>
         <div class="flex gap-4">
             {ROUTES.map((r) => {
-                return
-                <HeaderLink href={r.path}>{r.name}</HeaderLink>
+                return <HeaderLink href={r.path}>{r.name}</HeaderLink>;
             })}
         </div>
     </nav>
