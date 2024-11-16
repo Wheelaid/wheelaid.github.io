@@ -8,8 +8,10 @@ heroImage: '/blog-placeholder-3.jpg'
 #### **Introduction**
 
 > **Bienvenue sur la page de présentation de WheelAid !**  
-> Nous sommes une équipe d'innovation et de recherche composée de Tom, Célia, Mafalda, Johannye et Pauline, et nous avons
-> le plaisir de vous présenter notre projet, qui a pour objectif de faciliter la vie des brancardiers et d'améliorer leurs
+> Nous sommes une équipe d'innovation et de recherche composée de Tom, Célia, Mafalda, Johannye et Pauline, et nous
+> avons
+> le plaisir de vous présenter notre projet, qui a pour objectif de faciliter la vie des brancardiers et d'améliorer
+> leurs
 > conditions de travail.
 
 ---
@@ -27,4 +29,6 @@ heroImage: '/blog-placeholder-3.jpg'
 #### **Progrès et prochaines étapes**
 
 > **Où en sommes-nous ?**  
-Nous avons déjà réalisé un état de l’art, conçu les premiers schémas de notre maquette et élaboré un questionnaire pour mieux comprendre les besoins des brancardiers. Nos prochaines étapes incluent le **prototypage**, la recherche de matériaux adaptés et la mise en place de ce site pour vous tenir informés.
+> Nous avons déjà réalisé un état de l’art, conçu les premiers schémas de notre maquette et élaboré un questionnaire pour
+> mieux comprendre les besoins des brancardiers. Nos prochaines étapes incluent le **prototypage**, la recherche de
+> matériaux adaptés et la mise en place de ce site pour vous tenir informés.

@@ -1,13 +1,13 @@
 :root {
-	--accent: #6A95C8;
-	--accent-dark: #22224E;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+    --accent: #6A95C8;
+    --accent-dark: #22224E;
+    --black: 15, 18, 25;
+    --gray: 96, 115, 159;
+    --gray-light: 229, 233, 240;
+    --gray-dark: 34, 41, 57;
+    --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+    --box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
 }
 
 @font-face {
@@ -30,82 +30,105 @@ body {
     @apply text-left break-words text-danube-800 text-xl leading-relaxed m-0 p-0 bg-danube-50;
     font-family: "Atkinson", sans-serif;
     word-wrap: break-word;
-  }
-  main {
-      @apply w-[720px] max-w-full m-auto px-4 py-12;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-      @apply text-danube-950 leading-tight mt-0 mb-2 mx-0;
-  }
-  h1 {
-      @apply text-5xl;
-  }
-  h2 {
-      @apply text-4xl;
-  }
-  h3 {
-      @apply text-3xl;
-  }
-  h4 {
-      @apply text-2xl;
-  }
-  h5 {
-      @apply text-xl;
-  }
-  strong,
-  b {
+}
+
+main {
+    @apply w-[720px] max-w-full m-auto px-4 py-12;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-danube-950 leading-tight mt-0 mb-2 mx-0;
+}
+
+h1 {
+    @apply text-5xl;
+}
+
+h2 {
+    @apply text-4xl;
+}
+
+h3 {
+    @apply text-3xl;
+}
+
+h4 {
+    @apply text-2xl;
+}
+
+h5 {
+    @apply text-xl;
+}
+
+strong,
+b {
     @apply font-bold;
-  }
-  a {
-      @apply text-danube-400 hover:text-danube-400 hover:duration-200;
-  }
-  p {
-      @apply mb-4;
-  }
-  .prose p {
-      @apply mb-8;
-  }
-  textarea {
+}
+
+a {
+    @apply text-danube-400 hover:text-danube-400 hover:duration-200;
+}
+
+p {
+    @apply mb-4;
+}
+
+.prose p {
+    @apply mb-8;
+}
+
+textarea {
     @apply w-full text-base;
-  }
-  input {
+}
+
+input {
     @apply text-base;
-  }
-  table {
+}
+
+table {
     @apply w-full;
-  }
-  img {
+}
+
+img {
     @apply max-w-full h-auto rounded-lg;
-  }
-  code {
-      @apply bg-danube-200 px-1 py-0.5 rounded-sm;
-  }
-  pre {
-      @apply p-6 rounded-lg;
-  }
-  pre > code {
+}
+
+code {
+    @apply bg-danube-200 px-1 py-0.5 rounded-sm;
+}
+
+pre {
+    @apply p-6 rounded-lg;
+}
+
+pre > code {
     all: unset;
-  }
-  blockquote {
-      @apply border-l-danube-400 text-xl m-0 pl-5 pr-0 py-0 border-l-4 border-solid;
-  }
-  hr {
-      @apply border-t-danube-200 border-[none] border-t border-solid;
-  }
-  @media (max-width: 720px) {
+}
+
+blockquote {
+    @apply border-l-danube-400 text-xl m-0 pl-5 pr-0 py-0 border-l-4 border-solid;
+}
+
+hr {
+    @apply border-t-danube-200 border-[none] border-t border-solid;
+}
+
+@media (max-width: 720px) {
     body {
-      @apply text-lg;
+        @apply text-lg;
     }
+
     main {
         @apply p-4;
     }
-  }
-  .sr-only {
+}
+
+.sr-only {
     @apply absolute h-px w-px overflow-hidden whitespace-nowrap m-0 p-0 border-0;
     /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
     clip: rect(1px 1px 1px 1px);
@@ -114,5 +137,5 @@ body {
     /* modern browsers, clip-path works inwards from each corner */
     clip-path: inset(50%);
     /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-  }
+}
   
