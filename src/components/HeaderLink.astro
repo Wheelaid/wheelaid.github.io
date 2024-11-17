@@ -1,15 +1,17 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type {HTMLAttributes} from 'astro/types';
 
 type Props = HTMLAttributes<'a'>;
 
-const { href, ...props } = Astro.props;
+const {href, ...props} = Astro.props;
 
-const { pathname } = Astro.url;
+const {pathname} = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
-<a href={href} class={"inline-block no-underline " + (isActive ? "font-bold text-[var(--accent-dark)]" : "")} {...props}>
-	<slot />
+<a href={href}
+   class:list={["hover:border-danube-800", (isActive ? "border-b-2 border-danube-300" : "")]}
+   {...props}>
+    <slot/>
 </a>

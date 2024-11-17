@@ -1,19 +1,17 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
 
 
 import {Content} from '../content/pages/index.md';
 import * as params from '../content/pages/index.md';
 
 import BlogPost from '../layouts/BlogPost.astro';
-
 ---
-<BlogPost 
-	title={params.frontmatter.title}
-	description={params.frontmatter.description}
-	pubDate={new Date(params.frontmatter.pubDate)}
-	heroImage={params.frontmatter.heroImage}
+<BlogPost
+        title={params.frontmatter.title}
+        description={params.frontmatter.description}
+        heroImage={params.frontmatter.heroImage}
 >
-	<Content/>
+    <Content/>
 </BlogPost>
