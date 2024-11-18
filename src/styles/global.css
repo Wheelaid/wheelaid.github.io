@@ -61,7 +61,7 @@ p {
     @apply mb-4;
 }
 
-.prose p {
+.prose p, video {
     @apply mb-8;
 }
 
