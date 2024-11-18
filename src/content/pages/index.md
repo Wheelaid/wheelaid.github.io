@@ -1,5 +1,5 @@
 ---
-title: 'WheelAid - Faciliter le Transport pour améliorer les soins'
+title: 'WheelAid - Faciliter le transport pour améliorer les soins'
 description: 'Un dispositif innovant pour alléger les déplacements de brancards'
 pubDate: 'Nov 14 2024'
 ---
