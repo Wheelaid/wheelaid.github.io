@@ -1,12 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
+import {Content} from '../pagesContent/about.md';
+import * as params from '../pagesContent/about.md';
 
-
-import {Content} from '../content/pages/about.md';
-import * as params from '../content/pages/about.md';
-
-import BlogPost from '../layouts/BlogPost.astro';
+import BlogPost from '../components/BlogPost.astro';
 ---
 
 <BlogPost

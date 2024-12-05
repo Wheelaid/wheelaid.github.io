@@ -1,17 +1,18 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
+import {Content} from '../pagesContent/index.md';
+import * as params from '../pagesContent/index.md';
 
-
-import {Content} from '../content/pages/index.md';
-import * as params from '../content/pages/index.md';
-
-import BlogPost from '../layouts/BlogPost.astro';
+import BlogPost from '../components/BlogPost.astro';
+import Scene from '../components/Scene.astro';
 ---
+
+
 <BlogPost
         title={params.frontmatter.title}
         description={params.frontmatter.description}
         heroImage={params.frontmatter.heroImage}
 >
+    <Scene></Scene>
+
     <Content/>
 </BlogPost>
