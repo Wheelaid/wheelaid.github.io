@@ -1,0 +1,20 @@
+<script>
+    import { Application } from '@splinetool/runtime';
+
+    const canvas = document.querySelector('#canvasContainer');
+
+
+
+    const app = new Application(canvas)
+
+    app.load('/scene.splinecode').finally(()=>{
+
+    })
+
+</script>
+
+<div class="max-w-100 overflow-hidden grid place-items-center">
+    <canvas id="canvasContainer" class="max-w-full max-h-96" />
+</div>
+
+</canvas>

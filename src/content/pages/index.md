@@ -5,9 +5,7 @@ pubDate: 'Nov 14 2024'
 ---
 
 <!-- markdownlint-disable MD033 -->
-<video controls>
-  <source src="/video_presentation.mp4" type="video/mp4">
-</video>
+
 <!-- markdownlint-enable MD033 -->
 
 ## 👥 Qui sommes-nous ?

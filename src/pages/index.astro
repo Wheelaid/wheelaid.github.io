@@ -7,11 +7,16 @@ import {Content} from '../content/pages/index.md';
 import * as params from '../content/pages/index.md';
 
 import BlogPost from '../layouts/BlogPost.astro';
+import Scene from '../components/Scene.astro';
 ---
+
+
 <BlogPost
         title={params.frontmatter.title}
         description={params.frontmatter.description}
         heroImage={params.frontmatter.heroImage}
 >
+    <Scene></Scene>
+
     <Content/>
 </BlogPost>
