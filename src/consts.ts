@@ -9,4 +9,5 @@ export const ROUTES = [
     {name: "Projet", path: "/technical"},
     {name: "Questionnaire", path: "/form"},
     {name: "Contact", path: "/about"},
+    {name: "Blog", path: "/blog"},
 ]

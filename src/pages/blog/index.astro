@@ -60,28 +60,28 @@ const posts = (await getCollection('blog')).sort(
 
     </style>
 </head>
-<body>
-<Header/>
-<main>
-    <section>
-        <ul>
-            {
-                posts.map((post) => (
-                        <li>
-                            <a href={`/blog/${post.slug}/`}>
-                                {post.data.heroImage ?
-                                        <Image width={720} height={360} src={post.data.heroImage} alt=""></Image> : ""}
-                                <h4 class="m-0 text-danube-950 leading-none">{post.data.title}</h4>
-                                <p class="m-0 text-danube-500">
-                                    <FormattedDate date={post.data.pubDate!}/>
-                                </p>
-                            </a>
-                        </li>
-                ))
-            }
-        </ul>
-    </section>
-</main>
-<Footer/>
-</body>
+    <body>
+        <Header/>
+        <main>
+            <section>
+                <ul>
+                    {
+                        posts.map((post) => (
+                            <li>
+                                <a href={`/blog/${post.slug}/`}>
+                                    {post.data.heroImage ?
+                                            <Image width={720} height={360} src={post.data.heroImage} alt=""></Image> : ""}
+                                    <h4 class="m-0 text-danube-950 leading-none">{post.data.title}</h4>
+                                    <p class="m-0 text-danube-500">
+                                        <FormattedDate date={post.data.pubDate!}/>
+                                    </p>
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </section>
+        </main>
+        <Footer/>
+    </body>
 </html>
