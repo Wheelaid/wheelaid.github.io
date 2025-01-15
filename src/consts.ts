@@ -8,6 +8,5 @@ export const ROUTES = [
     {name: "Accueil", path: "/"},
     {name: "Projet", path: "/technical"},
     {name: "Questionnaire", path: "/form"},
-    {name: "Contact", path: "/about"},
     {name: "Blog", path: "/blog"},
 ]
